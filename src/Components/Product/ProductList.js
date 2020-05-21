@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+
 //--------------------------------------------------------
 
+
+  
 export default class ProductList extends Component {
     state = {
         loading: true,
-        products: []
+        products: {}
         // product: storeProduct
     }
     async componentDidMount() {
@@ -18,23 +22,25 @@ export default class ProductList extends Component {
         this.setState({
             loading: false,
             products: products
+            
         })
     }
 
     // handlecart = (e) =>{
     //  //<Link to={`/product/${product.id}`}>  </Link>
     //     console.log(this.element);
-
-
     //  }
-
-
+    
+    
     render() {
-
+        // const handleProduct = (product) =>{
+          
+        // }
+            
         const handlecart = (product) => {
             console.log(product.id);
         }
-
+        
         if (!this.state.loading) {
             return (
 
@@ -42,44 +48,44 @@ export default class ProductList extends Component {
             {/* heading */}
             <h2>Available Products : {this.state.products.length}</h2>
 
-            {this.state.products.map((product, index) => {
-                return (
-
-        
+                    <div className="col">
+                      
                         <div className="row">
-                            <div className="col">
+                        {this.state.products.map((product) => {
+                              return (
+                            <Card className="card">
+                            
+                                <div className="card-body">
+                                    <Title className="card-title">
+                                    <Link to={`/product/${product.id}`}>
+                                    {product.title}
+                                    </Link>
+                                    </Title>
+                                    <img src={product.image.url} alt="img" height="150"  />
+                                    <Description className="card-text"> Price: Rs {product.price}</Description>
+                                    <ActionButton onClick={() => { handlecart(product) }}>Add to Cart </ActionButton>
+                                </div>
 
-                                {/* Product card */}
-                                <Card className="card">
-
-                                    <div className="card-body">
-
-                                        <Title className="card-title">{product.title}</Title>
-
-                                        <img src={product.img} alt="Image" height="50" width="500" />
-
-                                        <Description className="card-text"> Price: Rs {product.price}</Description>
-
-                                        <ActionButton onClick={() => { handlecart(product) }}>Add to Cart </ActionButton>
-
-                                    </div>
-
-                                </Card>
-
-                            </div>
+                            </Card> 
+                            )
+                          })};
+                          
 
                         </div>
-                    
-                );
-            })};
+
+                    </div>
+                
+               
 
         </div>
+        
             ); // END OF IF STATEMENT 
         }
         return (<h2 className="container">Loading : Waiting for API</h2>)
 
     }
 }
+export var products;
 const Heading = styled.h4`
 align-items:center;
 padding-right:20rem;

@@ -40,7 +40,7 @@ class Navbar extends Component {
                     {/* center nav link products and mycarts */}
                     <div className="mx-0 ">
                         <a className="navbar-brand nav-link-ltr mx-auto">
-                            <Link to="/phones">Phones</Link>
+                            <Link to="/products">Products</Link>
                         </a>
                     </div>
 
