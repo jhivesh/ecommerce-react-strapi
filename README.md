@@ -4,7 +4,7 @@ This Single-Page Application website based on ecommerce website. React JS and st
 
 
 ### Requirement
-- Visual Studio Code (https://code.visualstudio.com/)
+- My Prefered Editor : Visual Studio Code (https://code.visualstudio.com/) // Use any of your choice 
 - Node JS @latest version (https://nodejs.org/en/)
 - Below is a list of nodes to be installed. (IMPORTANT)
 
