@@ -1,16 +1,6 @@
  ## Dynamic ECommerce Single Page Application / Website  
 This Single-Page Application website based on ecommerce website. React JS and strapi are currently used in the project. 
 
-## Table of Content 
- [ Requirement ]("https://github.com/jhivesh/ecommerce-react-strapi/blob/master/README.md#requirement")
-[Usage]
-[Project Setup]
-[Part 1 - Setup of Create-react-app]
-[Part 2 - Installation of strapi CMS]
-[Part 3 - Installing other modules ]
-[Contribution]
-[Hosting]
-
 
 ### Requirement
 - My Prefered Editor : Visual Studio Code (https://code.visualstudio.com/) // Use any of your choice 
