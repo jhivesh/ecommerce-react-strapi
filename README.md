@@ -2,7 +2,7 @@
 This Single-Page Application website based on ecommerce website. React JS and strapi are currently used in the project. 
 
 ## Table of Content 
-[Requirement] ("https://github.com/jhivesh/ecommerce-react-strapi/blob/master/README.md#requirement")
+ [ Requirement ]("https://github.com/jhivesh/ecommerce-react-strapi/blob/master/README.md#requirement")
 [Usage]
 [Project Setup]
 [Part 1 - Setup of Create-react-app]
