@@ -12,18 +12,18 @@ import Login from "./Components/Auth/Login";
 import SignUp from "./Components/Auth/SignUp";
 import NavBar from "./Components/Nav/Navbar";
 import ProfilePage from "./Components/Auth/ProfilePage";
-
+import Home from "./Components/Home/Home";
 
 class App extends Component {
   render() {
-    const user  = null;
+    
     return (
           
           <BrowserRouter>
           <NavBar/>
             
-          <Route exact path="/" component={Product}></Route>
-          <Route exact path="/phones" component={ProductList}></Route>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/products" component={ProductList}></Route>
           <Route exact path="/mycart" component={Cart}></Route>
           <Route exact path="/details" component={Details}></Route>
           <Route exact path="/login" component={Login}></Route>

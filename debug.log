@@ -25,3 +25,4 @@
 [0420/142609.563:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0420/144109.566:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0420/145609.569:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0521/133806.200:ERROR:process_info.cc(359)] UncheckedAllocate

@@ -1,0 +1,21 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "database": "my-project",
+        "host": "127.0.0.1",
+        "srv": true,
+        "port": 27017,
+        "uri":"mongodb://jhivesh:dbjhivesh@cluster0-shard-00-00-jpxkl.mongodb.net:27017,cluster0-shard-00-01-jpxkl.mongodb.net:27017,cluster0-shard-00-02-jpxkl.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "username": "jhivesh",
+        "password": "dbjhivesh"
+      },
+      "options": {
+        "authenticationDatabase": "",
+        "ssl":true
+      }
+    }
+  }
+}
