@@ -14,7 +14,7 @@ export default class ProductList extends Component {
         // product: storeProduct
     }
     async componentDidMount() {
-        let response = await fetch("http://localhost:1337/product")
+        let response = await fetch("http://localhost:1337/products")
         if (!response.ok) {
             return
         }
@@ -25,20 +25,16 @@ export default class ProductList extends Component {
             
         })
     }
+    
 
-    // handlecart = (e) =>{
-    //  //<Link to={`/product/${product.id}`}>  </Link>
-    //     console.log(this.element);
-    //  }
     
     
     render() {
-        // const handleProduct = (product) =>{
-          
-        // }
-            
+    
         const handlecart = (product) => {
-            console.log(product.id);
+            console.log(product);
+            console.log("The image is"+ product.image[0].formats.thumbnail.url)
+            console.log("Medium"+ product.image[0].formats.medium.url)
         }
         
         if (!this.state.loading) {
@@ -54,14 +50,16 @@ export default class ProductList extends Component {
                         {this.state.products.map((product) => {
                               return (
                             <Card className="card">
-                            
+                                
                                 <div className="card-body">
-                                    <Title className="card-title">
+                                    <Title className="card-title py-1">
                                     <Link to={`/product/${product.id}`}>
                                     {product.title}
+                                    <br/>
+                                    <img src={`http://localhost:1337${product.image[0].formats.medium.url}`} class="img-fluid py-3"alt="img"  />
                                     </Link>
                                     </Title>
-                                    <img src={product.image.url} alt="img" height="150"  />
+                                    
                                     <Description className="card-text"> Price: Rs {product.price}</Description>
                                     <ActionButton onClick={() => { handlecart(product) }}>Add to Cart </ActionButton>
                                 </div>

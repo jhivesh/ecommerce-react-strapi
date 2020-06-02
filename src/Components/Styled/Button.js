@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
-background-color:turquiose;
+background-color:#f7f7f7;
     font-size:1.2rem;
 border-radius:0.9rem;
  text-transform: capitalize;
@@ -16,10 +16,10 @@ border-radius:0.9rem;
     font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #031D44;
+  color: #1f6de0;
   display: inline-block;
   position: relative;
-  opacity: 0.75;
+  opacity: 1;
 
 `
 

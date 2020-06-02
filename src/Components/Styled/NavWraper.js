@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const NavWrapper = styled.nav`
 
-background-color: transparent;
 
 position: sticky;
 .navbar-brand{
@@ -10,7 +9,6 @@ position: sticky;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none; 
-    position:;
     opacity: 1;
     line-height: 50px;
 
