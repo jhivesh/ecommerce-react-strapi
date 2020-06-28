@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-
+import Product from "./Product";
 //--------------------------------------------------------
 
-
-  
 export default class ProductList extends Component {
     state = {
         loading: true,
         products: {}
-        // product: storeProduct
     }
     async componentDidMount() {
         let response = await fetch("http://localhost:1337/products")
@@ -25,63 +21,55 @@ export default class ProductList extends Component {
             
         })
     }
-    
 
-    
-    
+    //-------------------------------RENDER-------------------------------------
     render() {
     
-        const handlecart = (product) => {
-            console.log(product);
-            console.log("The image is"+ product.image[0].formats.thumbnail.url)
-            console.log("Medium"+ product.image[0].formats.medium.url)
-        }
+    const handlecart = (product) => {
+        console.log(product);
         
-        if (!this.state.loading) {
-            return (
+    }
+        
+    if (!this.state.loading) {
+        return (
+      <div className="container">
+          {/* heading */}
+          <Heading >Available Products : {this.state.products.length}</Heading>
+        <div className="col">
+        <div className="row">
 
-        <div className="container">
-            {/* heading */}
-            <h2>Available Products : {this.state.products.length}</h2>
-
-                    <div className="col">
-                      
-                        <div className="row">
-                        {this.state.products.map((product) => {
-                              return (
-                            <Card className="card">
-                                
-                                <div className="card-body">
-                                    <Title className="card-title py-1">
-                                    <Link to={`/product/${product.id}`}>
-                                    {product.title}
-                                    <br/>
-                                    <img src={`http://localhost:1337${product.image[0].formats.medium.url}`} class="img-fluid py-3"alt="img"  />
-                                    </Link>
-                                    </Title>
-                                    
-                                    <Description className="card-text"> Price: Rs {product.price}</Description>
-                                    <ActionButton onClick={() => { handlecart(product) }}>Add to Cart </ActionButton>
-                                </div>
-
-                            </Card> 
-                            )
-                          })};
-                          
-
-                        </div>
-
-                    </div>
-                
-               
-
-        </div>
+          {this.state.products.map((product) => {
+                return (
+              <Card className="card" key={product.image[0].hash}>
+                  
+                  <div className="card-body" key={product.image[0].mime}>
+                      <Title className="card-title py-1" key={product.id}>
+                      <Link to={`/product/${product.id}`} key={product.price}>
+                        {product.title}
+                        <br key={product.createdAt} />
+                        <img src={`http://localhost:1337${product.image[0].formats.small.url}`} 
+                        className="img-fluid py-3" key={product.qty}alt="img"  />
+                      </Link>
+                      </Title>
+                      <Description  className="card-text container" key={product.description}> 
+                      Rs {product.price}
+                      </Description>
+                      <ActionButton onClick={() => { handlecart(product) }}>Add to Cart </ActionButton>
+                  </div>
+              </Card> 
+              )
+            })};
+            
+          </div>
+      </div>
+    </div>
         
             ); // END OF IF STATEMENT 
         }
         return (<h2 className="container">Loading : Waiting for API</h2>)
 
     }
+    //--------------------------------------------END OF RENDER----------------------------------
 }
 export var products;
 const Heading = styled.h4`
@@ -92,7 +80,8 @@ const Card = styled.div`
 width: 18rem;
 margin-top:3rem;
 margin-right:1rem;
-border:none;
+border-style: double;
+
 
 :hover {
     border:2px solid #e5e5e5;

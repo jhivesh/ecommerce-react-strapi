@@ -10,72 +10,83 @@ import { NavWrapper } from "../Styled/NavWraper";
 
 
 
- function Navbar() {
+function Navbar() {
     return (
         <div className="container">
 
-                {/* a light navbar that is responsive for large devices */}
-                <NavWrapper className="navbar navbar-expand-md bg-inverse " role="navigation" >
+            {/* a light navbar that is responsive for large devices */}
+            <NavWrapper className="navbar  navbar-expand-md bg-success" role="navigation" >
 
-                    {/* <ul className="navbar-nav mr-auto align-items-center">
+                {/* <ul className="navbar-nav mr-auto align-items-center">
                         <img src={logo} height="50" alt="logo" />
                         <div className="navbar-brand">
                             <Link to="/">CoolBrand</Link>
                         </div>
                     </ul> */}
 
-                    <div className="mx-0 ">
-                        <a className="navbar-brand mx-auto">
+                <div className="mx-0 ">
+                    <a className="navbar-brand mx-auto">
                         <Link to="/">
-                            <img src={home} height="25" alt="logo" class="pr-2"/>
-                            <div className="navbar-brand">
-                                    Home                               
-                            </div>
-                         </Link>
-                        </a>
+                            
+                                <img src={home} height="25" alt="logo" className="pr-2" />
+                                <div className="navbar-brand">
+                                    Home
+                                </div>
+                            
+                        </Link>
+                    </a>
 
-                    </div>
+                </div>
 
 
 
-                    {/* center nav link products and mycarts */}
-                    <div className="mx-0 ">
-                        <a className="navbar-brand nav-link-ltr mx-auto">
-                            <Link to="/products">Products</Link>
-                        </a>
-                    </div>
+                {/* center nav link products and mycarts */}
+                <div className="mx-0 ">
+                    <a className="navbar-brand nav-link-ltr mx-auto">
+                        <Link to="/products">
+                         
+                                Products
+                               
+                        </Link>
+                    </a>
+                </div>
 
-                    <div className="mx-0 ">
-                        <a href="#" className="navbar-brand  mx-auto">
-                            <span className="p-4 nav-link-ltr">
-                               <Link to="/mycart">
-                                <img src={cart} height="25" atl="logo" />
+                <div className="mx-0 ">
+                    <a className="navbar-brand  mx-auto">
+                        <span className="p-4 nav-link-ltr">
+                            <Link to="/mycart">
+                                    <img src={cart} height="25" atl="logo" />
                                     MyCart
-                                </Link>
-                            </span>
-                        </a>
+                            </Link>
 
-                    </div>
-                    
-                        <div className="ml-3 nav-link-ltr">
-                            <ButtonContainer>
-                                <img src={user} height="25" atl="user" />
-                                <Link to="/login">Login</Link>
+                        </span>
+                    </a>
+
+                </div>
+
+                <div className="ml-3 nav-link-ltr">
+                    <Link to="/login">
+                        <ButtonContainer>
+                            <img src={user} height="25" atl="user" />
+                                login
                             </ButtonContainer>
-                        </div>
+                    </Link>
+                </div>
 
-                        <div className="mx-3">
-                            <ButtonContainer>
-                                <Link to="/signup">Sign up</Link>
+                <div className="mx-3">
+                    <Link to="/signup">
+                        <ButtonContainer>
+                            Sign up
                             </ButtonContainer>
-                        </div>
+                    </Link>
+                </div>
 
 
 
 
 
-                    {/* login and sign up button */}
-                    {/* <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                {/* login and sign up button */}
+                {/* <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                         <ul class="navbar-nav ml-auto">
 
                             <li class="nav-item">
@@ -97,8 +108,8 @@ import { NavWrapper } from "../Styled/NavWraper";
 
                         </ul>
                     </div> */}
-                </NavWrapper>
-            </div>
+            </NavWrapper>
+        </div>
     )
 }
 export default withRouter(Navbar);

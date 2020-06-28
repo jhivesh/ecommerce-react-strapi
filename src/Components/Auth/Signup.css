@@ -1,7 +1,7 @@
 
 
 body {
-    background: #C5E1A5;
+    background: #F8F9F9;
   }
   form {
     width: 60%;
@@ -78,4 +78,6 @@ body {
     background: #8BC34A;
     color: #ffffff;
   }
-  
+  .container{
+    background-color: #FFFFFF;
+  }

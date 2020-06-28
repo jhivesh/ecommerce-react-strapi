@@ -9,7 +9,7 @@ border-radius:0.9rem;
  cursor:pointer;
  transition:all 0.4s ease-in-out;
  &:hover{
-    background-color:blue;
+    background-color:grey;
      color:var(--mainBlue);
  }
  font-weight: bold;
