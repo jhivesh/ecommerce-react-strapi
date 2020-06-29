@@ -1,20 +1,15 @@
- ## Dynamic ECommerce Single Page Application / Website  
-This Single-Page Application website based on ecommerce website. React JS and strapi are currently used in the project. 
-
-
+ ## React Application 
+It is a electronic store bootscraped and strapi is used for REST-api. 
  
 ### Project Setup  
 After downloading the project and extracting to a folder, open a terminal. 
-Below show how to install nodes modules using 'npm install' or npm i 
-
 ```bash
+cd ecommerce-react-strapi      
 npm i
 ````
 
-
 ### Strapi Setup 
-Change terminal directory into the folder using cd  (use npm or npx)
-
+Change terminal directory into the folder strapi-cms and install its node modules. 
 ```bash
  cd <strapi-cms>
  npm i
