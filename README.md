@@ -1,8 +1,8 @@
- ## React Application 
+## React SP Application 
 It is a electronic store bootscraped and strapi is used for rest-api. 
  
 ### Project Setup  
-After downloading the project and extracting to a folder, open a terminal. 
+After downloading the project or git cloning this repository, open a terminal the path of your repository. 
 ```bash
 cd ecommerce-react-strapi      
 npm i
