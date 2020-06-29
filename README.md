@@ -1,5 +1,5 @@
  ## React Application 
-It is a electronic store bootscraped and strapi is used for REST-api. 
+It is a electronic store bootscraped and strapi is used for rest-api. 
  
 ### Project Setup  
 After downloading the project and extracting to a folder, open a terminal. 
